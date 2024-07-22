@@ -120,32 +120,32 @@ const SankeyDiagram = () => {
             .selectAll('text')
             .data(nodes)
             .join('text')
-            .attr('x', d => d.x0 < width / 2 ? d.x1 - 35 : d.x0 - 6)
-            .attr('y', d => d.type === 'planet' ? 17.5 : (d.y1 + d.y0) / 2)
+            .attr('x', d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+            .attr('y', d => (d.y1 + d.y0) / 2)
             .attr('dy', '0.35em')
             .attr('text-anchor', d => d.x0 < width / 2 ? 'start' : 'end')
-            .attr('transform', d => d.type === 'planet' ? `translate(${d.x0 - 10}, ${(d.y1 + d.y0) / 2}) rotate(-90)` : null)
-            .style('font-weight', 'bold')
-            .style('fill', d => d.type === 'planet' ? 'white' : 'black')
             .call(enter => enter.transition(transition)
-                .attr('x', d => d.x0 < width / 2 ? d.x1 - 35 : d.x0 - 6)
-                .attr('y', d => d.type === 'planet' ? 17.5 : (d.y1 + d.y0) / 2))
+                .attr('x', d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+                .attr('y', d => (d.y1 + d.y0) / 2))
             .text(d => d.id);
 
         // Adjust container height to fit the SVG
         const svgHeight = svg.node().getBBox().height;
-        containerRef.current.style.height = `${svgHeight + headingHeight + 20}px`;
-        containerRef.current.style.minHeight = `${svgHeight + headingHeight + 20}px`;
+        // containerRef.current.style.height = `${svgHeight + headingHeight + 20}px`;
+        // containerRef.current.style.minHeight = `${svgHeight + headingHeight + 20}px`;
+
+        // Update viewBox to make SVG responsive
+        svg.attr('viewBox', `0 0 ${width} ${height}`);
     }, [data]);
 
     return (
-        <div ref={containerRef} className="w-full p-6 bg-sw-brown-light border border-gray-200 rounded-lg shadow dark:bg-white-800 dark:border-gray-700">
+        <div ref={containerRef} className="p-6 bg-sw-brown-light border border-gray-200 rounded-lg shadow dark:bg-white-800 dark:border-gray-700">
             <h2 ref={headingRef} className="text-xl font-semibold mb-2 text-sw-brown-dark">Star Wars Planets and Films Sankey Diagram</h2>
             <div className="w-full overflow-x-auto">
                 {loading ? (
                     <LoadingAnimation />
                 ) : (
-                    <svg ref={svgRef} className="w-full h-auto" viewBox={`0 0 ${containerRef.current ? containerRef.current.offsetWidth : 1000} ${svgRef.current ? svgRef.current.getBBox().height : window.innerHeight * 0.8}`} preserveAspectRatio="xMidYMid meet"></svg>
+                    <svg ref={svgRef} className="w-full h-auto" preserveAspectRatio="xMidYMid meet"></svg>
                 )}
             </div>
             <Modal show={showModal} onClose={() => setShowModal(false)}>
