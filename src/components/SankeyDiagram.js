@@ -131,8 +131,6 @@ const SankeyDiagram = () => {
 
         // Adjust container height to fit the SVG
         const svgHeight = svg.node().getBBox().height;
-        // containerRef.current.style.height = `${svgHeight + headingHeight + 20}px`;
-        // containerRef.current.style.minHeight = `${svgHeight + headingHeight + 20}px`;
 
         // Update viewBox to make SVG responsive
         svg.attr('viewBox', `0 0 ${width} ${height}`);
