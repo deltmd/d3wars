@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/d3wars/static/css/main.9da23b4f.css",
-    "main.js": "/d3wars/static/js/main.aa06dc68.js",
+    "main.css": "/d3wars/static/css/main.7dd08ae7.css",
+    "main.js": "/d3wars/static/js/main.b853af11.js",
     "static/js/453.898533c0.chunk.js": "/d3wars/static/js/453.898533c0.chunk.js",
     "index.html": "/d3wars/index.html",
-    "main.9da23b4f.css.map": "/d3wars/static/css/main.9da23b4f.css.map",
-    "main.aa06dc68.js.map": "/d3wars/static/js/main.aa06dc68.js.map",
+    "main.7dd08ae7.css.map": "/d3wars/static/css/main.7dd08ae7.css.map",
+    "main.b853af11.js.map": "/d3wars/static/js/main.b853af11.js.map",
     "453.898533c0.chunk.js.map": "/d3wars/static/js/453.898533c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9da23b4f.css",
-    "static/js/main.aa06dc68.js"
+    "static/css/main.7dd08ae7.css",
+    "static/js/main.b853af11.js"
   ]
 }
