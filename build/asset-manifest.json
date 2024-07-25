@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/d3wars/static/css/main.6fc4e8fa.css",
+    "main.js": "/d3wars/static/js/main.8983d079.js",
+    "static/js/453.898533c0.chunk.js": "/d3wars/static/js/453.898533c0.chunk.js",
+    "index.html": "/d3wars/index.html",
+    "main.6fc4e8fa.css.map": "/d3wars/static/css/main.6fc4e8fa.css.map",
+    "main.8983d079.js.map": "/d3wars/static/js/main.8983d079.js.map",
+    "453.898533c0.chunk.js.map": "/d3wars/static/js/453.898533c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6fc4e8fa.css",
+    "static/js/main.8983d079.js"
+  ]
+}
